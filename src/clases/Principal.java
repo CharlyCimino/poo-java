@@ -1,21 +1,25 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package clases;
 
-/**
- *
- * @author caemci
- */
 public class Principal {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Persona p1 = new Persona();
+        
+        p1.nombre = "Juan";
+        p1.apellido = "Pérez";
+        p1.genero = 'M';
+        p1.paisDeOrigen = "Argentina";
+        p1.DNI = "12345678";
+        p1.fechaDeNacimiento = "09/07/1990";
+        p1.estadoCivil = "Soltero";
+        p1.domicilio = "Bulnes 1526 4to C";
+        p1.mail = "jp90@gma1l.com";
+        p1.movil = "1123456789";
+        
+        p1.presentarse();
+        p1.cambiarDeEstadoCivil("En pareja");
+        p1.presentarse();
     }
     
 }
