@@ -5,12 +5,12 @@ public class CuentaBancaria {
     private static long ultimoNumeroDeCuenta = 1728392018; // Las variables de clase son visibles por todas las instancias de la clase
     private final String CBU;
     private String alias;
-    private final String tipo;
-    private final char moneda;
+    private final TipoDeCuenta tipo;
+    private final Moneda moneda;
     private double saldo;
     private Persona titular;
 
-    public CuentaBancaria(String alias, String tipo, char moneda, Persona titular) {
+    public CuentaBancaria(String alias, TipoDeCuenta tipo, Moneda moneda, Persona titular) {
         CuentaBancaria.ultimoNumeroDeCuenta++; // Al instanciar, se incrementa el contador de cuentas bancarias
         this.CBU = obtenerCBU( CuentaBancaria.ultimoNumeroDeCuenta ); // Se genera un CBU con el formato adecuado
         this.alias = alias;
@@ -95,11 +95,11 @@ public class CuentaBancaria {
         this.alias = alias;
     }
 
-    public String getTipo() {
+    public TipoDeCuenta getTipo() {
         return tipo;
     }
 
-    public char getMoneda() {
+    public Moneda getMoneda() {
         return moneda;
     }
 

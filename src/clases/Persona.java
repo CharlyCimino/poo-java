@@ -13,16 +13,16 @@ public class Persona {
     
     private String nombre;
     private String apellido;
-    private char genero;
+    private Genero genero;
     private final String paisDeOrigen;
     private final String DNI;
     private final String fechaDeNacimiento;
-    private String estadoCivil;
+    private EstadoCivil estadoCivil;
     private String domicilio;
     private String movil;
     private String mail;
 
-    public Persona(String nombre, String apellido, char genero, String paisDeOrigen, String DNI, String fechaDeNacimiento, String estadoCivil, String domicilio, String movil, String mail) {
+    public Persona(String nombre, String apellido, Genero genero, String paisDeOrigen, String DNI, String fechaDeNacimiento, EstadoCivil estadoCivil, String domicilio, String movil, String mail) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.genero = genero;
@@ -42,7 +42,7 @@ public class Persona {
   
     public void presentarse () {
         System.out.println( "\"Hola ! Soy " + nombreCompleto() + ", de " + paisDeOrigen +
-                            ". Tengo " + obtenerEdad() + " años y me encuentro " + estadoCivil.toLowerCase() + 
+                            ". Tengo " + obtenerEdad() + " años y me encuentro " + estadoCivil + 
                             ". Escribime a " + mail);
     }
 
@@ -74,11 +74,11 @@ public class Persona {
         this.apellido = apellido;
     }
 
-    public char getGenero() {
+    public Genero getGenero() {
         return genero;
     }
 
-    public void setGenero(char genero) {
+    public void setGenero(Genero genero) {
         this.genero = genero;
     }
 
@@ -94,11 +94,11 @@ public class Persona {
         return fechaDeNacimiento;
     }
 
-    public String getEstadoCivil() {
+    public EstadoCivil getEstadoCivil() {
         return estadoCivil;
     }
 
-    public void setEstadoCivil(String estadoCivil) {
+    public void setEstadoCivil(EstadoCivil estadoCivil) {
         this.estadoCivil = estadoCivil;
     }
 
