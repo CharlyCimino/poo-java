@@ -7,18 +7,13 @@ public class Principal {
         
         Persona jp = new Persona("Juan","Pérez",'M',"Argentina","12345678","09/07/1990","Soltero","Bulnes 1526 4to C","1123456789","jp90@gma1l.com");
         
-        jp.presentarse();
+        CuentaBancaria cb = new CuentaBancaria("jupe90", "Caja de ahorros", '$', jp);
         
-        jp.setNombre("Luis");
-        
-        jp.presentarse();
-        
-        jp.setMail("mailIncorrecto");
+        // Hay dos maneras de acceder a Juan Pérez:        
+        jp.setNombre("Pedro");
+        cb.getTitular().setApellido("Ramírez");
         
         jp.presentarse();
-        
-        jp.setMail("lupe@gma1l.com");
-        
-        jp.presentarse();
+        System.out.println( cb );
     }
 }
